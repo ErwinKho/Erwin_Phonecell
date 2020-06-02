@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "b033d8e1-28d0-40af-b083-51019b5e9589",
+		"name": "Erwin Phone Cell",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.erwinkho.com/test/erwin_phonecell/login.php?method=post&username=admin&password=admin",
+							"protocol": "http",
+							"host": [
+								"www",
+								"erwinkho",
+								"com"
+							],
+							"path": [
+								"test",
+								"erwin_phonecell",
+								"login.php"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "post"
+								},
+								{
+									"key": "username",
+									"value": "admin"
+								},
+								{
+									"key": "password",
+									"value": "admin"
+								}
+							]
+						},
+						"description": "Digunakan untuk login...\ndan mengetahui lever si user...\napakah si user itu pembeli atau admin..."
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.erwinkho.com/test/erwin_phonecell/users.php?method=post&username=dedi&password=dedi",
+							"protocol": "http",
+							"host": [
+								"www",
+								"erwinkho",
+								"com"
+							],
+							"path": [
+								"test",
+								"erwin_phonecell",
+								"users.php"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "post"
+								},
+								{
+									"key": "username",
+									"value": "dedi"
+								},
+								{
+									"key": "password",
+									"value": "dedi"
+								}
+							]
+						},
+						"description": "untuk registrasi si user..\nregistrasi dapat dilakukan dengan login atau pun tidak login...\npassword otomatis di generate jadi hash.."
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.erwinkho.com/test/erwin_phonecell/users.php?method=put&username=mariana&password=mariana",
+							"protocol": "http",
+							"host": [
+								"www",
+								"erwinkho",
+								"com"
+							],
+							"path": [
+								"test",
+								"erwin_phonecell",
+								"users.php"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "put"
+								},
+								{
+									"key": "username",
+									"value": "mariana"
+								},
+								{
+									"key": "password",
+									"value": "mariana"
+								}
+							]
+						},
+						"description": "untuk mengganti password atau username si user.."
+					},
+					"response": []
+				},
+				{
+					"name": "List User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.erwinkho.com/test/erwin_phonecell/users.php?method=get",
+							"protocol": "http",
+							"host": [
+								"www",
+								"erwinkho",
+								"com"
+							],
+							"path": [
+								"test",
+								"erwin_phonecell",
+								"users.php"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "get"
+								}
+							]
+						},
+						"description": "admin level\ndapat melihat wallet semua user yang terdaftar..\n\npembeli level\nhanya dapat melihat identitas user itu sendiri saja..."
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.erwinkho.com/test/erwin_phonecell/logout.php?method=get&confirm=yes",
+							"protocol": "http",
+							"host": [
+								"www",
+								"erwinkho",
+								"com"
+							],
+							"path": [
+								"test",
+								"erwin_phonecell",
+								"logout.php"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "get"
+								},
+								{
+									"key": "confirm",
+									"value": "yes"
+								}
+							]
+						},
+						"description": "Digunakan untuk Log out"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Purchase",
+			"item": [
+				{
+					"name": "Top up Wallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.erwinkho.com/test/erwin_phonecell/purchase.php?method=put&wallet=500000",
+							"protocol": "http",
+							"host": [
+								"www",
+								"erwinkho",
+								"com"
+							],
+							"path": [
+								"test",
+								"erwin_phonecell",
+								"purchase.php"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "put"
+								},
+								{
+									"key": "wallet",
+									"value": "500000"
+								}
+							]
+						},
+						"description": "pada saat registrasi wallet akan default 0.. \ndan si user dapat men topup wallet setelah login.."
+					},
+					"response": []
+				},
+				{
+					"name": "Purchases",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.erwinkho.com/test/erwin_phonecell/purchase.php?method=post&barcode=1010&jumlah=1",
+							"protocol": "http",
+							"host": [
+								"www",
+								"erwinkho",
+								"com"
+							],
+							"path": [
+								"test",
+								"erwin_phonecell",
+								"purchase.php"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "post"
+								},
+								{
+									"key": "barcode",
+									"value": "1010"
+								},
+								{
+									"key": "jumlah",
+									"value": "1"
+								}
+							]
+						},
+						"description": "proses pembelian..\njika stock tidak mencukupi maka user akan mendapat message \"Stok telah Habis / Item tidak ada\"...\njika wallet user tidak mencukupi maka user akan mendapat message \"wallet tidak cukup\"...\njika pembelian berhasil..\njumlah item di list item serta wallet user akan berkurang secara otomatis..\ndan history pembelian akan di save..."
+					},
+					"response": []
+				},
+				{
+					"name": "Purchases History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.erwinkho.com/test/erwin_phonecell/purchase.php?method=get",
+							"protocol": "http",
+							"host": [
+								"www",
+								"erwinkho",
+								"com"
+							],
+							"path": [
+								"test",
+								"erwin_phonecell",
+								"purchase.php"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "get"
+								}
+							]
+						},
+						"description": "pirchases history...\nhanya dapat dilihat oleh si admin saja...\ndapat di gunakan untuk memantau penjualan perbulan..."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "Add Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.erwinkho.com/test/erwin_phonecell/item.php?method=post&barcode=1011&nama_item=IPHONE Xxxx&jumlah=1&harga=12500000",
+							"protocol": "http",
+							"host": [
+								"www",
+								"erwinkho",
+								"com"
+							],
+							"path": [
+								"test",
+								"erwin_phonecell",
+								"item.php"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "post"
+								},
+								{
+									"key": "barcode",
+									"value": "1011"
+								},
+								{
+									"key": "nama_item",
+									"value": "IPHONE Xxxx"
+								},
+								{
+									"key": "jumlah",
+									"value": "1"
+								},
+								{
+									"key": "harga",
+									"value": "12500000"
+								}
+							]
+						},
+						"description": "digunakan untuk menambah item atau restock..\nhanya dapat digunakan oleh admin..."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://www.erwinkho.com/test/erwin_phonecell/item.php?method=delete&barcode=1011",
+							"protocol": "http",
+							"host": [
+								"www",
+								"erwinkho",
+								"com"
+							],
+							"path": [
+								"test",
+								"erwin_phonecell",
+								"item.php"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "delete"
+								},
+								{
+									"key": "barcode",
+									"value": "1011"
+								}
+							]
+						},
+						"description": "mendelete item yang sudah tidak ada atau tidak diperlukan lagi...\nhanya admin yang dapat mengakses.."
+					},
+					"response": []
+				},
+				{
+					"name": "List Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.erwinkho.com/test/erwin_phonecell/item.php?method=get",
+							"protocol": "http",
+							"host": [
+								"www",
+								"erwinkho",
+								"com"
+							],
+							"path": [
+								"test",
+								"erwin_phonecell",
+								"item.php"
+							],
+							"query": [
+								{
+									"key": "method",
+									"value": "get"
+								}
+							]
+						},
+						"description": "digunakan untuk memantau stock oleh si admin..\ndan si pembeli sendiri tidak perlu menanyakan mengenai jumlah stock, harga, nama barang, dll karna disini sudah tertera semua detail item.."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
